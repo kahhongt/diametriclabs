@@ -2,15 +2,11 @@
 
 ## Overview
 
-Synther from Diametric Labs is a collaborative visual thought studio that leverages artificial intelligence to enhance knowledge representation and reasoning. It is designed to facilitate strategic work and decision-making through AI-guided brainstorming and personal thinking tools. The platform aims to connect ideas, present opposing viewpoints, and expand users' worldviews.
+Synther from Diametric Labs is a collaborative visual thought studio that leverages artificial intelligence to enhance knowledge representation and reasoning.
 
 ## Mission
 
 **Help people think better together**
-
-- Map relationships between ideas
-- Generate insights from relationships
-- Modify relationships based on new information
 
 ## Features
 
@@ -79,23 +75,3 @@ Synther from Diametric Labs is a collaborative visual thought studio that levera
      - Network analysis of complex situations
      - Resource allocation optimization
      - Scenario planning and risk assessment
-
-## Technical Details
-
-### Frontend
-
-- The frontend is built using modern web technologies, including React, as indicated by the use of `StrictMode` and `createRoot` in `main.jsx`.
-- The application is styled using CSS, with styles imported in `index.html` and `main.jsx`.
-
-### Backend
-
-- Python Flask API
-- Relation Extraction
-- Relation Modification
-- Relation Manager
-- Graph Rendering
-
-### Data and AI
-
-- The platform uses AI to extract relationships from text
-- It handles various types of relationships, such as causal, hierarchical, and associative, to provide insights into financial performance and other strategic areas.
