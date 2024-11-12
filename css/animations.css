@@ -1,0 +1,13 @@
+/* Simplifying animations - only keeping subtle hover effect */
+.nav-links a::after {
+    background-color: var(--primary-color);
+}
+
+/* Remove other animations */
+.hero-content {
+    animation: none;
+}
+
+.service-card {
+    animation: none;
+} 
