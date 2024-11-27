@@ -129,14 +129,6 @@ body {
     padding: 5rem 2rem;
 }
 
-.about-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
 
 .about-image img {
     width: 100%;
@@ -262,8 +254,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
+    gap: 2rem;
 }
 
 .hero-content {
