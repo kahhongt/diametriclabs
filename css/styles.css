@@ -241,9 +241,14 @@ body {
     }
 
     .hero {
-        padding-top: 100px;
+        padding-top: 120px;
         height: auto;
-        min-height: 80vh;
+        min-height: 100vh;
+    }
+
+    .hero-logo {
+        margin-top: 1rem;
+        width: 100%;
     }
 }
 
