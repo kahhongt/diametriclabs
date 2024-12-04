@@ -64,6 +64,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 80px;
 }
 
 .hero-content h1 {
@@ -237,6 +238,12 @@ body {
 
     .hero-content h1 {
         font-size: 2.5rem;
+    }
+
+    .hero {
+        padding-top: 100px;
+        height: auto;
+        min-height: 80vh;
     }
 }
 
