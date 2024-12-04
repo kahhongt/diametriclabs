@@ -1,55 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.querySelector('.mobile-menu');
     const navLinks = document.querySelector('.nav-links');
 
-    mobileMenu.addEventListener('click', function() {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        this.classList.toggle('active');
+    mobileMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
     });
-
-    // Smooth Scrolling for Navigation Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                // Close mobile menu if open
-                if (window.innerWidth <= 768) {
-                    navLinks.style.display = 'none';
-                    mobileMenu.classList.remove('active');
-                }
-            }
-        });
-    });
-
-    // Form Submission Handler
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            const button = this.querySelector('button[type="submit"]');
-            button.disabled = true;
-            button.textContent = 'Sending...';
-        });
-    }
-
-    // Scroll Animation
-    function revealOnScroll() {
-        const elements = document.querySelectorAll('.service-card, .about-content');
-        elements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const elementVisible = 150;
-            
-            if (elementTop < window.innerHeight - elementVisible) {
-                element.classList.add('active');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Initial check
 }); 

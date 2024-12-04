@@ -1,7 +1,7 @@
 :root {
     --primary-color: #060644;
     --secondary-color: #060644;
-    --text-color: #333333;
+    --text-color: #060644;
     --white: #FFFFFF;
 }
 
@@ -30,7 +30,7 @@ body {
 .nav-container {
     max-width: 1250px;
     margin: 0 auto;
-    padding: 0.1rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,6 +41,11 @@ body {
     width: auto;
     margin-top: 10px;
     margin-bottom: 0px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a {
@@ -55,6 +60,23 @@ body {
     color: var(--secondary-color);
 }
 
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
 /* Hero Section */
 .hero {
     height: 80vh;
@@ -67,9 +89,27 @@ body {
     padding-top: 80px;
 }
 
+.hero-content {
+    text-align: center;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--primary-color);
+    margin-top: 1rem;
+    max-width: 1000px;
 }
 
 .cta-button {
@@ -86,6 +126,28 @@ body {
 
 .cta-button:hover {
     background: var(--secondary-color);
+}
+
+/* About Section */
+.about {
+    padding: 5rem 2rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 850px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* Services Section */
@@ -125,17 +187,6 @@ body {
 .service-card img {
     width: 64px;
     margin-bottom: 1rem;
-}
-
-/* About Section */
-.about {
-    padding: 5rem 2rem;
-}
-
-
-.about-image img {
-    width: 100%;
-    border-radius: 10px;
 }
 
 /* Contact Section */
@@ -190,6 +241,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
+    align-items: center;
 }
 
 .social-links a {
@@ -205,27 +257,26 @@ body {
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Mobile Menu */
-.mobile-menu {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.mobile-menu span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: var(--primary-color);
-    margin: 5px 0;
-    transition: 0.3s;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--white);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 1rem 0;
+        text-align: center;
     }
 
     .mobile-menu {
@@ -247,13 +298,33 @@ body {
     }
 
     .hero-logo {
-        margin-top: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
         width: 100%;
     }
-}
 
-.text-center {
-    text-align: center;
+    .logo-container {
+        margin-top: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+
+    .cta-button {
+        width: 80%;
+        text-align: center;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .beta-tag {
@@ -265,31 +336,6 @@ body {
     margin: 8px 0;
 }
 
-.about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 850px;
-    margin: 0 auto;
-    gap: 2rem;
-}
-
-.hero-content {
-    text-align: center;
-    max-height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Posts Section */
 .posts {
     padding: 5rem 2rem;
     background: var(--white);
@@ -338,15 +384,9 @@ section {
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
-    .posts-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Add these styles to your existing CSS */
+/* Post Page Styles */
 .post-page {
-    padding-top: 100px; /* Account for fixed header */
+    padding-top: 100px;
     max-width: 800px;
     margin: 0 auto;
     padding-bottom: 5rem;
@@ -392,14 +432,6 @@ section {
     height: auto;
     margin-bottom: 2rem;
     margin-top: 3rem;
-}
-
-.hero-description {
-    font-size: 1.5rem; /* Increase font size */
-    line-height: 1.8; /* Adjust line height for better readability */
-    color: var(--primary-color); /* Optional: Change text color */
-    margin-top: 1rem; /* Optional: Add some space above the paragraph */
-    max-width: 1000px;
 }
 
 .bold-text {
