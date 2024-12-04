@@ -56,15 +56,6 @@ The contact form is powered by Formspree and configured to:
 - Process submissions securely
 - Provide feedback to users upon submission
 
-## Browser Support
-
-The website is optimized for modern browsers including:
-
-- Chrome
-- Firefox
-- Safari
-- Edge
-
 ## Mobile Responsiveness
 
 The site includes:
