@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #444444;
-    --secondary-color: #444444;
+    --primary-color: #060644;
+    --secondary-color: #060644;
     --text-color: #333333;
     --white: #FFFFFF;
 }
@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Telegraf', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
 }
@@ -80,6 +80,7 @@ body {
     border-radius: 5px;
     margin-top: 2rem;
     transition: background 0.3s ease;
+    font-family: 'Telegraf', sans-serif;
 }
 
 .cta-button:hover {
@@ -112,6 +113,7 @@ body {
     text-align: center;
     transition: transform 0.3s ease;
     border: 1px solid #eee;
+    font-family: 'Telegraf', sans-serif;
 }
 
 .service-card:hover {
@@ -178,6 +180,7 @@ body {
     color: var(--primary-color);
     padding: 3rem 2rem 1rem;
     border-top: 1px solid #eee;
+    font-family: 'Telegraf', sans-serif;
 }
 
 .footer-content {
@@ -261,6 +264,11 @@ body {
 
 .hero-content {
     text-align: center;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 section {
@@ -334,6 +342,7 @@ section {
 
 .post-content {
     padding: 2rem;
+    font-family: 'Telegraf', sans-serif;
 }
 
 .post-content h1 {
@@ -359,4 +368,27 @@ section {
 
 .post-content code {
     font-family: monospace;
-} 
+}
+
+.logo-container {
+    max-width: 500px;
+    margin: 0 auto 0;
+}
+
+.hero-logo {
+    width: 110%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.hero-description {
+    font-size: 1.5rem; /* Increase font size */
+    line-height: 1.8; /* Adjust line height for better readability */
+    color: var(--primary-color); /* Optional: Change text color */
+    margin-top: 1rem; /* Optional: Add some space above the paragraph */
+    max-width: 1000px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
