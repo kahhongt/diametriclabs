@@ -1,8 +1,9 @@
 :root {
-    --primary-color: #060644;
-    --secondary-color: #060644;
-    --text-color: #060644;
+    --primary-color: #010E30;
+    --secondary-color: #010E30;
+    --text-color: #010E30;
     --white: #FFFFFF;
+    --background-color: #EFEAEA;
 }
 
 * {
@@ -15,6 +16,7 @@ body {
     font-family: 'Telegraf', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 /* Header Styles */
@@ -23,8 +25,9 @@ body {
     width: 100%;
     background: var(--white);
     box-shadow: none;
-    border-bottom: 1px solid #eee;
+    border-bottom: 0.7px solid #808080;
     z-index: 1000;
+    background-color: var(--background-color);
 }
 
 .nav-container {
@@ -80,7 +83,7 @@ body {
 /* Hero Section */
 .hero {
     height: 80vh;
-    background: var(--white);
+    background: var(--background-color);
     color: var(--primary-color);
     display: flex;
     align-items: center;
@@ -153,7 +156,7 @@ body {
 /* Services Section */
 .services {
     padding: 5rem 2rem;
-    background: var(--white);
+    background: var(--background-color);
 }
 
 .services h2 {
@@ -192,7 +195,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 5rem 2rem;
-    background: var(--white);
+    background: var(--background-color);
 }
 
 .contact-form {
@@ -233,6 +236,7 @@ body {
     padding: 3rem 2rem 1rem;
     border-top: 1px solid #eee;
     font-family: 'Telegraf', sans-serif;
+    background-color: var(--background-color);
 }
 
 .footer-content {
