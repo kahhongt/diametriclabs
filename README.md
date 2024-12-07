@@ -1,78 +1,50 @@
-# Diametric Labs Website
+# React + TypeScript + Vite
 
-A modern, responsive landing page for Diametric Labs, showcasing the Solaris AI-assisted decision-making platform.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Overview
+Currently, two official plugins are available:
 
-This website serves as the primary landing page for Diametric Labs, featuring:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- Information about the Solaris experiment
-- Company mission and team background
-- Beta program registration
+## Expanding the ESLint configuration
 
-## Features
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Responsive design for all device sizes
-- Modern, clean UI with animations
-- Mobile-friendly navigation
-- Integrated contact form using Formspree
-- Dark/light mode support (via logo assets)
+- Configure the top-level `parserOptions` property like this:
 
-## Technology Stack
-
-- HTML5
-- CSS3 (with custom animations)
-- JavaScript
-- Formspree (form handling)
-
-## Project Structure
-
-```
-├── index.html
-├── css/
-│   ├── styles.css
-│   └── animations.css
-├── js/
-│   └── main.js
-├── images/
-│   ├── Light Mode - Header.png
-│   ├── solaris_hero_logo.png
-│   └── symbol_only_round.png
-└── CNAME
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-## Setup and Development
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-1. Clone the repository
-2. Open `index.html` in your browser to view the site
-3. Make changes to CSS in the `css` directory
-4. JavaScript functionality can be modified in `js/main.js`
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-## Contact Form
-
-The contact form is powered by Formspree and configured to:
-
-- Collect email addresses for beta program registration
-- Process submissions securely
-- Provide feedback to users upon submission
-
-## Mobile Responsiveness
-
-The site includes:
-
-- Responsive navigation with hamburger menu
-- Fluid typography and spacing
-- Optimized images for different screen sizes
-- Mobile-first design approach
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-Copyright © 2024 Diametric Labs. All rights reserved.
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
