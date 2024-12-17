@@ -5,9 +5,10 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
+        "export": "next export",
+        "deploy": "next build && cp CNAME out/ && cp README.md out/ && gh-pages -d out",
         "start": "next start",
-        "lint": "next lint",
-        "deploy": "cp README.md out/ && git add -f out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
+        "lint": "next lint"
     },
     "dependencies": {
         "@radix-ui/react-dropdown-menu": "^2.1.3",
