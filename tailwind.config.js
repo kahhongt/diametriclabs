@@ -1,17 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
+    darkMode: 'class',
     theme: {
-        darkMode: 'class',
         extend: {
+            fontFamily: {
+                sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
             colors: {
                 primary: '#03143E',
                 secondary: '#14285B',
                 accent: '#A8BDD1',
-                background: '#EFEAEA',
-                text: '#ffffff',
+                background: '#FFFFFF',
+                text: '#03143E',
                 // Dark mode colors
-                'dark-background': '#010E30',
+                'dark-background': '#020617',
                 'dark-primary': '#A8BDD1',
                 'dark-secondary': '#ffffff',
                 'dark-accent': '#ffffff',
