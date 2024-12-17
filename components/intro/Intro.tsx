@@ -5,19 +5,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BiLogoTelegram } from 'react-icons/bi';
 import { IoArrowDown } from 'react-icons/io5';
+import { getBasePath } from '@/lib/basePath';
 
 function Intro() {
+    const basePath = getBasePath();
+
     return (
         <div className='flex flex-col items-center justify-center gap-5'>
             <div className='relative w-full max-w-[600px] aspect-[2/1]'>
                 <Image
-                    src='/images/solaris-dark.png'
+                    src={`${basePath}/images/solaris-dark.png`}
                     alt='Solaris Dark'
                     fill
                     className={`object-contain transition-opacity duration-300 theme-image-dark`}
                 />
                 <Image
-                    src='/images/solaris-light.png'
+                    src={`${basePath}/images/solaris-light.png`}
                     alt='Solaris Light'
                     fill
                     className={`object-contain transition-opacity duration-300 theme-image-light`}

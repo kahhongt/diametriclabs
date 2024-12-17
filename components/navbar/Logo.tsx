@@ -2,19 +2,22 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { getBasePath } from '@/lib/basePath';
 
 function Logo() {
+    const basePath = getBasePath();
+
     return (
         <Link href='/'>
             <div className='relative w-[150px] aspect-[5/1]'>
                 <Image
-                    src='/images/diametric-dark.png'
+                    src={`${basePath}/images/diametric-dark.png`}
                     alt='Diametric Dark'
                     fill
                     className={`object-contain transition-opacity duration-300 theme-image-dark`}
                 />
                 <Image
-                    src='/images/diametric-light.png'
+                    src={`${basePath}/images/diametric-light.png`}
                     alt='Diametric Light'
                     fill
                     className={`object-contain transition-opacity duration-300 theme-image-light`}

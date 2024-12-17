@@ -21,10 +21,16 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const basePath =
+        process.env.NODE_ENV === 'production' ? '/diametriclabs' : '';
+
     return (
         <html lang='en' suppressHydrationWarning>
             <head>
-                <link rel='icon' href='/images/dark-round-logo.png' />
+                <link
+                    rel='icon'
+                    href={`${basePath}/images/dark-round-logo.png`}
+                />
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `
