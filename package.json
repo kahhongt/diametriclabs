@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "deploy": "cp README.md out/ && git add -f out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin main"
+        "deploy": "cp README.md out/ && git add -f out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
     },
     "dependencies": {
         "@radix-ui/react-dropdown-menu": "^2.1.3",
