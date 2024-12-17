@@ -1,4 +1,4 @@
-# Diametric Labs Website
+# Diametric Labs
 
 A modern, responsive landing page for Diametric Labs, showcasing the Solaris AI-assisted decision-making platform.
 
@@ -9,61 +9,88 @@ This website serves as the primary landing page for Diametric Labs, featuring:
 -   Information about the Solaris experiment
 -   Company mission and team background
 -   Beta program registration
-
-## Features
-
--   Responsive design for all device sizes
--   Modern, clean UI with animations
--   Mobile-friendly navigation
--   Integrated contact form using Formspree
--   Dark/light mode support (via logo assets)
+-   Dark/light mode support
+-   Responsive design
 
 ## Technology Stack
 
--   HTML5
--   CSS3 (with custom animations)
--   JavaScript
--   Formspree (form handling)
+-   Next.js 14
+-   TypeScript
+-   TailwindCSS
+-   Radix UI Components
+-   next-themes
+-   React Icons
 
 ## Project Structure
 
 ```
-├── index.html
-├── css/
-│   ├── styles.css
-│   └── animations.css
-├── js/
-│   └── main.js
-├── images/
-│   ├── Light Mode - Header.png
-│   ├── solaris_hero_logo.png
-│   └── symbol_only_round.png
-└── CNAME
+├── app/
+│   ├── components/
+│   ├── hooks/
+│   ├── lib/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── public/
+│   └── images/
+├── components/
+│   ├── about/
+│   ├── contact/
+│   ├── footer/
+│   ├── intro/
+│   ├── navbar/
+│   └── ui/
+└── package.json
 ```
 
 ## Setup and Development
 
 1. Clone the repository
-2. Open `index.html` in your browser to view the site
-3. Make changes to CSS in the `css` directory
-4. JavaScript functionality can be modified in `js/main.js`
+2. Install dependencies:
 
-## Contact Form
+```bash
+npm install
+```
 
-The contact form is powered by Formspree and configured to:
+3. Run the development server:
 
--   Collect email addresses for beta program registration
--   Process submissions securely
--   Provide feedback to users upon submission
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Building for Production
+
+1. Create a production build:
+
+```bash
+npm run build
+```
+
+2. Deploy the static output from the `out` directory to gh-pages branch
+
+```bash
+npm run deploy
+```
+
+## Contact
+
+The website includes a contact section with:
+
+-   Direct email link to hello@diametriclabs.com
+-   Links to Telegram bot
+-   Social media integration
 
 ## Mobile Responsiveness
 
-The site includes:
+The site implements:
 
--   Responsive navigation with hamburger menu
--   Fluid typography and spacing
+-   Responsive navigation
+-   Fluid typography using Tailwind CSS
 -   Optimized images for different screen sizes
 -   Mobile-first design approach
+-   Smooth transitions and animations
 
 ## Contributing
 
