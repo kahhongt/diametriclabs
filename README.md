@@ -1,50 +1,108 @@
-# React + TypeScript + Vite
+# Diametric Labs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive landing page for Diametric Labs, showcasing the Solaris AI-assisted decision-making platform.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This website serves as the primary landing page for Diametric Labs, featuring:
 
-## Expanding the ESLint configuration
+-   Information about the Solaris experiment
+-   Company mission and team background
+-   Dark/light mode support
+-   Responsive design
+-   Telegram bot integration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technology Stack
 
-- Configure the top-level `parserOptions` property like this:
+-   React 18
+-   TypeScript
+-   Vite
+-   TailwindCSS
+-   React Router
+-   React Icons
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Structure
+
+```
+├── src/
+│   ├── components/
+│   │   ├── About.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Home.tsx
+│   │   ├── ModeToggle.tsx
+│   │   └── Navbar.tsx
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   └── App.css
+├── public/
+│   └── images/
+├── index.html
+└── package.json
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Setup and Development
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clone the repository
+2. Install dependencies:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+3. Run the development server:
+
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+## Building for Production
+
+1. Create a production build:
+
+```bash
+npm run build
+```
+
+2. Deploy the static output from the `dist` directory to gh-pages branch:
+
+```bash
+npm run deploy
+```
+
+## Features
+
+### Dark Mode Support
+
+-   Automatic system preference detection
+-   Manual toggle option
+-   Persistent preference storage
+-   Themed UI components and images
+
+### Mobile Responsiveness
+
+-   Responsive navigation menu
+-   Fluid typography using Tailwind CSS
+-   Optimized images for different screen sizes
+-   Mobile-first design approach
+
+### Contact Options
+
+-   Direct email link to hello@diametriclabs.com
+-   Integration with Telegram bot
+-   Responsive contact section
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+Copyright © 2024 Diametric Labs. All rights reserved.
