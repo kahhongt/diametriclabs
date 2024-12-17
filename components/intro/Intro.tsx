@@ -5,11 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BiLogoTelegram } from 'react-icons/bi';
 import { IoArrowDown } from 'react-icons/io5';
-import { useThemeMode } from '@/hooks/useThemeMode';
 
 function Intro() {
-    const { theme } = useThemeMode();
-
     return (
         <div className='flex flex-col items-center justify-center gap-5'>
             <div className='relative w-full max-w-[600px] aspect-[2/1]'>

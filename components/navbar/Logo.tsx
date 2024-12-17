@@ -2,11 +2,8 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useThemeMode } from '@/hooks/useThemeMode';
 
 function Logo() {
-    const { theme } = useThemeMode();
-
     return (
         <Link href='/'>
             <div className='relative w-[150px] aspect-[5/1]'>

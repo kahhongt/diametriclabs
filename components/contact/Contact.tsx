@@ -12,7 +12,7 @@ function Contact() {
                 <TbMessageCircle />
                 Stay in touch
             </h1>
-            <p className='text-lg'>We'd love to hear from you!</p>
+            <p className='text-lg'>We&apos;d love to hear from you!</p>
             <Button>
                 <Link href='mailto:hello@diametriclabs.com'>
                     Contact us at hello@diametriclabs.com

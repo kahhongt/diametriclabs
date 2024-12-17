@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Diametric Labs Website
 
-## Getting Started
+A modern, responsive landing page for Diametric Labs, showcasing the Solaris AI-assisted decision-making platform.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This website serves as the primary landing page for Diametric Labs, featuring:
+
+-   Information about the Solaris experiment
+-   Company mission and team background
+-   Beta program registration
+
+## Features
+
+-   Responsive design for all device sizes
+-   Modern, clean UI with animations
+-   Mobile-friendly navigation
+-   Integrated contact form using Formspree
+-   Dark/light mode support (via logo assets)
+
+## Technology Stack
+
+-   HTML5
+-   CSS3 (with custom animations)
+-   JavaScript
+-   Formspree (form handling)
+
+## Project Structure
+
+```
+├── index.html
+├── css/
+│   ├── styles.css
+│   └── animations.css
+├── js/
+│   └── main.js
+├── images/
+│   ├── Light Mode - Header.png
+│   ├── solaris_hero_logo.png
+│   └── symbol_only_round.png
+└── CNAME
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup and Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository
+2. Open `index.html` in your browser to view the site
+3. Make changes to CSS in the `css` directory
+4. JavaScript functionality can be modified in `js/main.js`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contact Form
 
-## Learn More
+The contact form is powered by Formspree and configured to:
 
-To learn more about Next.js, take a look at the following resources:
+-   Collect email addresses for beta program registration
+-   Process submissions securely
+-   Provide feedback to users upon submission
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Mobile Responsiveness
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The site includes:
 
-## Deploy on Vercel
+-   Responsive navigation with hamburger menu
+-   Fluid typography and spacing
+-   Optimized images for different screen sizes
+-   Mobile-first design approach
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+Copyright © 2024 Diametric Labs. All rights reserved.
