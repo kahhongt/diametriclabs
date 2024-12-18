@@ -18,7 +18,7 @@ function Home() {
                 />
                 <h1 className='text-4xl text-primary dark:text-dark-primary font-bold py-10 text-center max-w-6xl '>
                     We are conducting a large-scale experiment on AI-assisted
-                    personal decision-making.
+                    personal decision making.
                 </h1>
                 <p className='text-lg text-secondary dark:text-dark-secondary max-w-4xl text-center px-4 mb-8'>
                     To facilitate this experiment, we are building Solaris, a

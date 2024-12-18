@@ -29,7 +29,7 @@ function ModeToggle() {
     return (
         <button
             onClick={toggleMode}
-            className='p-2 rounded-lg bg-background text-primary dark:bg-dark-background dark:text-dark-primary border-none'
+            className='p-2 rounded-lg bg-background text-primary dark:bg-dark-background dark:text-dark-primary border-none transition-colors duration-300'
         >
             {isDark ? (
                 <FiSun className='w-5 h-5' />
