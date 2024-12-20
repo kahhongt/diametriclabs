@@ -1,7 +1,3 @@
-# Diametric Labs Website
-
-A modern, responsive landing page for Diametric Labs, showcasing the Solaris AI-assisted decision-making platform.
-
 ## Overview
 
 This website serves as the primary landing page for Diametric Labs, featuring:
