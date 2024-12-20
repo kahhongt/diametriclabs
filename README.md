@@ -1,8 +1,8 @@
 ## Overview
 
-This website serves as the primary landing page for Diametric Labs, featuring:
+This website serves as the primary landing page for Fluffy, featuring:
 
-- Information about the Solaris experiment
+- Information about the Product
 - Company mission and team background
 - Beta program registration
 
@@ -21,21 +21,6 @@ This website serves as the primary landing page for Diametric Labs, featuring:
 - JavaScript
 - Formspree (form handling)
 
-## Project Structure
-
-```
-├── index.html
-├── css/
-│   ├── styles.css
-│   └── animations.css
-├── js/
-│   └── main.js
-├── images/
-│   ├── Light Mode - Header.png
-│   ├── solaris_hero_logo.png
-│   └── symbol_only_round.png
-└── CNAME
-```
 
 ## Setup and Development
 
@@ -69,6 +54,3 @@ The site includes:
 4. Push to the branch
 5. Create a Pull Request
 
-## License
-
-Copyright © 2024 Diametric Labs. All rights reserved.
